@@ -1,18 +1,11 @@
 {
     "Gacha_HomePage": {
-        "doc": "识别右下图钉-章节主页",
-        "recognition": "TemplateMatch",
-        "roi": [
-            1122,
-            646,
-            40,
-            38
-        ],
-        "template": [
-            "pin.png"
-        ],
+        "doc": "抽卡-返回地图",
         "next": [
             "Gacha_BackHomePage"
+        ],
+        "interrupt": [
+            "Common_BackBtn"
         ]
     },
     "Gacha_BackHomePage": {
@@ -131,10 +124,10 @@
         "doc": "点击右下抽卡",
         "recognition": "OCR",
         "roi": [
-            909,
-            653,
-            66,
-            31
+            942,
+            658,
+            58,
+            21
         ],
         "expected": "免费1次",
         "action": "Click",

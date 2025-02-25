@@ -1,18 +1,11 @@
 {
     "Battle_StartGame_HomePage": {
-        "doc": "识别右下图钉-章节主页",
-        "recognition": "TemplateMatch",
-        "roi": [
-            1122,
-            646,
-            40,
-            38
-        ],
-        "template": [
-            "pin.png"
-        ],
+        "doc": "地图扫荡-返回地图页",
         "next": [
             "Battle_TouchCollect"
+        ],
+        "interrupt": [
+            "Common_BackBtn"
         ]
     },
     "Battle_TouchCollect": {

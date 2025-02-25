@@ -6,7 +6,12 @@
         "post_delay": 5000,
         "pre_wait_freezes": 500,
         "next": [
-            "StartGame_Logo"
+            "StartGame_Logo",
+            "StartGame_BackMapPage",
+            "StartGame_FinBackMapPage"
+        ],
+        "interrupt": [
+            "Common_BackBtn"
         ]
     },
     "StartGame_Logo": {
@@ -23,7 +28,9 @@
             "StartGame_Logo",
             "StartGame_LoadingPage",
             "StartGame_TouchStart",
-            "StartGame_PayFaild"
+            "StartGame_PayFaild",
+            "StartGame_BackMapPage",
+            "StartGame_FinBackMapPage"
         ]
     },
     "StartGame_LoadingPage": {

@@ -1,18 +1,11 @@
 {
     "Event_HomePage": {
-        "doc": "识别右下图钉-章节主页",
-        "recognition": "TemplateMatch",
-        "roi": [
-            1122,
-            646,
-            40,
-            38
-        ],
-        "template": [
-            "pin.png"
-        ],
+        "doc": "活动任务-返回地图页",
         "next": [
             "Event_BackHomePage"
+        ],
+        "interrupt": [
+            "Common_BackBtn"
         ]
     },
     "Event_BackHomePage": {
@@ -129,12 +122,12 @@
         "doc": "奖励返回",
         "recognition": "OCR",
         "roi": [
-            558,
+            560,
             627,
-            144,
-            38
+            77,
+            36
         ],
-        "expected": "点击画面即可返回",
+        "expected": "点击画面",
         "action": "Click",
         "post_delay": 1000,
         "next": [
@@ -151,92 +144,6 @@
             43
         ],
         "expected": "伙伴",
-        "action": "Click",
-        "target": [
-            130,
-            46,
-            0,
-            0
-        ],
-        "post_delay": 1000,
-        "next": [
-            "Event_Explore"
-        ]
-    },
-    "Event_Explore": {
-        "doc": "战场探索",
-        "recognition": "OCR",
-        "roi": [
-            598,
-            617,
-            90,
-            60
-        ],
-        "expected": "战场探索",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "Event_FastExplore"
-        ]
-    },
-    "Event_FastExplore": {
-        "doc": "快速完成",
-        "recognition": "OCR",
-        "roi": [
-            722,
-            557,
-            89,
-            36
-        ],
-        "expected": "快速完成",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "Event_FastExplore2"
-        ]
-    },
-    "Event_FastExplore2": {
-        "doc": "快速战斗-确认",
-        "recognition": "OCR",
-        "roi": [
-            697,
-            516,
-            58,
-            32
-        ],
-        "expected": "确认",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "Event_FastExploreRewardBack"
-        ]
-    },
-    "Event_FastExploreRewardBack": {
-        "doc": "奖励返回",
-        "recognition": "OCR",
-        "roi": [
-            556,
-            625,
-            147,
-            38
-        ],
-        "expected": "点击画面即可返回",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "Event_FastExploreBack"
-        ]
-    },
-    "Event_FastExploreBack": {
-        "doc": "战场探索-返回",
-        "recognition": "OCR",
-        "roi": [
-            215,
-            16,
-            124,
-            50
-        ],
-        "expected": "战场探索",
         "action": "Click",
         "target": [
             130,

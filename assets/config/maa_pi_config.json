@@ -1,25 +1,57 @@
 {
+    "resource": "官服",
     "controller": {
         "name": "安卓端"
     },
+    "task": [
+        {
+            "name": "启动游戏",
+            "option": []
+        },
+        {
+            "name": "地图采集",
+            "option": []
+        },
+        {
+            "name": "地图扫荡",
+            "option": []
+        },
+        {
+            "name": "活动图扫荡",
+            "option": []
+        },
+        {
+            "name": "竞技场",
+            "option": []
+        },
+        {
+            "name": "白嫖抽卡",
+            "option": []
+        },
+        {
+            "name": "领取日常奖励",
+            "option": []
+        },
+        {
+            "name": "领取通行证奖励",
+            "option": []
+        },
+        {
+            "name": "领取邮件",
+            "option": []
+        }
+    ],
     "adb": {
-        "adb_path": "D:/MuMu Player 12/shell/adb.exe",
-        "address": "127.0.0.1:16448",
+        "adb_path": "E:/Program Files/MuMu/MuMuPlayer-12.0/shell/adb.exe",
+        "address": "127.0.0.1:16384",
         "config": {
             "extras": {
                 "mumu": {
                     "enable": true,
-                    "index": 2,
-                    "path": "D:/MuMu Player 12"
+                    "index": 0,
+                    "path": "E:/Program Files/MuMu/MuMuPlayer-12.0"
                 }
             }
         }
-    },
-    "resource": "官服",
-    "task": [
-        {
-            "name": "开始游戏",
-            "option": []
-        }
-    ]
+    }
 }

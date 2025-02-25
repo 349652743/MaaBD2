@@ -1,18 +1,11 @@
 {
     "Mail_HomePage": {
-        "doc": "识别右下图钉-章节主页",
-        "recognition": "TemplateMatch",
-        "roi": [
-            1122,
-            646,
-            40,
-            38
-        ],
-        "template": [
-            "pin.png"
-        ],
+        "doc": "领取邮件-返回地图页",
         "next": [
             "Mail_BackHomePage"
+        ],
+        "interrupt": [
+            "Common_BackBtn"
         ]
     },
     "Mail_BackHomePage": {

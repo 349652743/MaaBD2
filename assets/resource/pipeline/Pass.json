@@ -1,18 +1,11 @@
 {
     "Pass_HomePage": {
-        "doc": "识别右下图钉-章节主页",
-        "recognition": "TemplateMatch",
-        "roi": [
-            1122,
-            646,
-            40,
-            38
-        ],
-        "template": [
-            "pin.png"
-        ],
+        "doc": "领取通行证奖励-返回地图页",
         "next": [
             "Pass_BackHomePage"
+        ],
+        "interrupt": [
+            "Common_BackBtn"
         ]
     },
     "Pass_BackHomePage": {
@@ -128,6 +121,9 @@
         "next": [
             "Pass_SelectPassLev",
             "Pass_Back"
+        ],
+        "interrupt": [
+            "Common_BackBtn"
         ]
     },
     "Pass_SelectPassLev": {

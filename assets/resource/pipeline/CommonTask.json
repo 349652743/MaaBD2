@@ -1,0 +1,54 @@
+{
+    "Common_BackBtn": {
+        "doc": "返回按钮",
+        "next": [
+            "Common_BackBtn1",
+            "Common_BackBtn2",
+            "Common_HomePage"
+        ]
+    },
+    "Common_BackBtn1": {
+        "doc": "返回按钮",
+        "recognition": "TemplateMatch",
+        "roi": [
+            114,
+            12,
+            46,
+            54
+        ],
+        "action": "Click",
+        "template": "BackBtn.png",
+        "next": [
+            "Common_BackBtn"
+        ]
+    },
+    "Common_BackBtn2": {
+        "doc": "返回按钮2",
+        "recognition": "TemplateMatch",
+        "roi": [
+            116,
+            15,
+            42,
+            48
+        ],
+        "action": "Click",
+        "template": "BackBtn2.png",
+        "next": [
+            "Common_BackBtn"
+        ]
+    },
+    "Common_HomePage": {
+        "doc": "识别右下图钉-章节主页",
+        "recognition": "TemplateMatch",
+        "roi": [
+            1122,
+            646,
+            40,
+            38
+        ],
+        "template": [
+            "pin.png"
+        ],
+        "next": []
+    }
+}

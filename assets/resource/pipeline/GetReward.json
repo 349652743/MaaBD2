@@ -1,18 +1,11 @@
 {
     "GetReward_HomePage": {
-        "doc": "识别右下图钉-章节主页",
-        "recognition": "TemplateMatch",
-        "roi": [
-            1122,
-            646,
-            40,
-            38
-        ],
-        "template": [
-            "pin.png"
-        ],
+        "doc": "领取日常奖励-返回地图页",
         "next": [
             "GetReward_BackHomePage"
+        ],
+        "interrupt": [
+            "Common_BackBtn"
         ]
     },
     "GetReward_BackHomePage": {
@@ -48,28 +41,24 @@
             35
         ],
         "post_delay": 1000,
-        "expected": "工会",
+        "expected": "公会",
+        "action": "Click",
         "next": [
+            "GetReward_EnterUnion",
             "GetReward_UnionGUI"
         ]
     },
     "GetReward_UnionGUI": {
         "doc": "工会签到",
-        "recognition": "TemplateMatch",
+        "recognition": "OCR",
         "roi": [
-            622,
-            300,
-            34,
-            32
+            547,
+            505,
+            189,
+            35
         ],
-        "template": "UnionReward.png",
+        "expected": "奖励已发放至信箱",
         "action": "Click",
-        "target": [
-            625,
-            525,
-            0,
-            0
-        ],
         "post_delay": 3000,
         "next": [
             "GetReward_UnionBack"
@@ -131,39 +120,34 @@
         ]
     },
     "GetReward_GetDailyRewardBack": {
-        "doc": "点击领取全部返回",
+        "doc": "点击领取全部",
         "recognition": "OCR",
         "roi": [
-            558,
-            630,
-            147,
-            34
+            552,
+            627,
+            165,
+            42
         ],
-        "expected": "点击画面即可返回",
+        "expected": "点击画面",
         "action": "Click",
         "post_delay": 3000,
         "next": [
-            "GetReward_BackHomePage2"
+            "GetReward_DailyRewardBack"
         ]
     },
-    "GetReward_BackHomePage2": {
-        "doc": "点击领取全部返回",
-        "recognition": "OCR",
+    "GetReward_DailyRewardBack": {
+        "doc": "点击每日任务返回",
+        "recognition": "TemplateMatch",
         "roi": [
-            215,
-            19,
-            122,
-            42
+            113,
+            14,
+            47,
+            52
         ],
-        "expected": "每日任务",
+        "template": "DailyRewardBack.png",
+        "threshold": 0.99,
         "action": "Click",
         "post_delay": 3000,
-        "target": [
-            135,
-            38,
-            0,
-            0
-        ],
         "next": [
             "GetReward_BusinReward"
         ]
@@ -204,15 +188,16 @@
         "doc": "点击领取全部返回",
         "recognition": "OCR",
         "roi": [
-            552,
-            627,
-            165,
-            42
+            594,
+            213,
+            88,
+            39
         ],
-        "expected": "点击画面",
+        "expected": "获得.*种",
         "action": "Click",
         "post_delay": 3000,
         "next": [
+            "GetReward_GetBusinRewardBack",
             "GetReward_FinGetReward"
         ]
     },

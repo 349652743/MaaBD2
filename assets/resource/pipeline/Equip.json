@@ -1,18 +1,11 @@
 {
     "Equip_HomePage": {
-        "doc": "识别右下图钉-章节主页",
-        "recognition": "TemplateMatch",
-        "roi": [
-            1122,
-            646,
-            40,
-            38
-        ],
-        "template": [
-            "pin.png"
-        ],
+        "doc": "装备制作强化分解炼制-返回地图页",
         "next": [
             "Equip_Skill4"
+        ],
+        "interrupt": [
+            "Common_BackBtn"
         ]
     },
     "Equip_Skill4": {
