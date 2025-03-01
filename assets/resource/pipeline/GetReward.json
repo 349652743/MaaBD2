@@ -45,7 +45,8 @@
         "action": "Click",
         "next": [
             "GetReward_EnterUnion",
-            "GetReward_UnionGUI"
+            "GetReward_UnionGUI",
+            "GetReward_UnionBack"
         ]
     },
     "GetReward_UnionGUI": {
@@ -104,22 +105,71 @@
     },
     "GetReward_GetDailyReward": {
         "doc": "点击领取全部",
-        "recognition": "TemplateMatch",
+        "recognition": "OCR",
         "roi": [
-            1022,
-            640,
-            138,
-            38
+            1049,
+            639,
+            84,
+            41
         ],
-        "template": "dailyreward.png",
-        "threshold": 0.99,
+        "expected": "全部获得",
         "action": "Click",
         "post_delay": 3000,
         "next": [
-            "GetReward_GetDailyRewardBack"
+            "GetReward_GetDailyRewardBack",
+            "GetReward_WeeklyReward"
         ]
     },
     "GetReward_GetDailyRewardBack": {
+        "doc": "点击领取全部",
+        "recognition": "OCR",
+        "roi": [
+            552,
+            627,
+            165,
+            42
+        ],
+        "expected": "点击画面",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "GetReward_WeeklyReward"
+        ]
+    },
+    "GetReward_WeeklyReward": {
+        "doc": "识别点击每周任务",
+        "recognition": "OCR",
+        "roi": [
+            177,
+            151,
+            108,
+            44
+        ],
+        "post_delay": 1000,
+        "expected": "每周任务",
+        "action": "Click",
+        "next": [
+            "GetReward_GetWeeklyReward"
+        ]
+    },
+    "GetReward_GetWeeklyReward": {
+        "doc": "点击领取全部",
+        "recognition": "OCR",
+        "roi": [
+            1049,
+            639,
+            84,
+            41
+        ],
+        "expected": "全部获得",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "GetReward_GetWeeklyRewardBack",
+            "GetReward_DailyRewardBack"
+        ]
+    },
+    "GetReward_GetWeeklyRewardBack": {
         "doc": "点击领取全部",
         "recognition": "OCR",
         "roi": [
