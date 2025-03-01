@@ -12,22 +12,14 @@
         "doc": "PVE点击技能4",
         "recognition": "TemplateMatch",
         "roi": [
-            1122,
-            646,
-            40,
-            38
+            1067,
+            415,
+            62,
+            57
         ],
-        "template": [
-            "pin.png"
-        ],
+        "template": "skill4.png",
         "action": "Click",
         "post_delay": 2000,
-        "target": [
-            1097,
-            442,
-            0,
-            0
-        ],
         "next": [
             "Equip_EquipMakeGui"
         ]
@@ -183,27 +175,38 @@
         "action": "Click",
         "post_delay": 1000,
         "next": [
-            "Equip_EquipUpSelect"
+            "Equip_EquipUpSelect",
+            "Equip_EquipUpConfirm"
         ]
     },
     "Equip_EquipUpSelect": {
+        "doc": "点击选中",
+        "recognition": "TemplateMatch",
+        "roi": [
+            745,
+            428,
+            353,
+            158
+        ],
+        "template": "EquipSelectBtn.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "Equip_EquipUpSelect",
+            "Equip_EquipUpConfirm"
+        ]
+    },
+    "Equip_EquipUpConfirm": {
         "doc": "点击对号",
         "recognition": "TemplateMatch",
         "roi": [
-            757,
-            293,
-            81,
-            49
+            1123,
+            643,
+            34,
+            34
         ],
-        "template": "N2.png",
-        "threshold": 0.99,
+        "template": "EquipConfirmBtn.png",
         "action": "Click",
-        "target": [
-            1142,
-            660,
-            0,
-            0
-        ],
         "post_delay": 1000,
         "next": [
             "Equip_EquipUpSelect2"

@@ -9,9 +9,6 @@
             "StartGame_Logo",
             "StartGame_BackMapPage",
             "StartGame_FinBackMapPage"
-        ],
-        "interrupt": [
-            "Common_BackBtn"
         ]
     },
     "StartGame_Logo": {

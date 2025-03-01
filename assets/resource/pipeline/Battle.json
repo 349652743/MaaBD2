@@ -28,7 +28,22 @@
             0
         ],
         "next": [
+            "Battle_CollectBattleQuotaOver",
             "Battle_CollectBattleTouch"
+        ]
+    },
+    "Battle_CollectBattleQuotaOver": {
+        "doc": "米饭额度用完",
+        "recognition": "TemplateMatch",
+        "roi": [
+            1020,
+            30,
+            80,
+            34
+        ],
+        "template": "CollectBattleOver.png",
+        "next": [
+            "Battle_StoneBattle"
         ]
     },
     "Battle_CollectBattleTouch": {
@@ -112,6 +127,7 @@
         ],
         "expected": "快速狩猎",
         "action": "Click",
+        "post_delay": 2000,
         "next": [
             "Battle_FastBattleMAXTouch"
         ]
@@ -126,6 +142,12 @@
             36
         ],
         "expected": "MAX",
+        "target": [
+            776,
+            377,
+            61,
+            31
+        ],
         "action": "Click",
         "next": [
             "Battle_FastBattle2"
@@ -144,6 +166,7 @@
         "action": "Click",
         "post_delay": 5000,
         "next": [
+            "Battle_FastBattle2",
             "Battle_FastBattleReward2"
         ]
     },
@@ -182,7 +205,22 @@
             0
         ],
         "next": [
+            "Battle_StoneBattleQuotaOver",
             "Battle_FastBattleTouch_StoneSelect"
+        ]
+    },
+    "Battle_StoneBattleQuotaOver": {
+        "doc": "石头额度用完",
+        "recognition": "TemplateMatch",
+        "roi": [
+            1035,
+            30,
+            85,
+            33
+        ],
+        "template": "StoneBattleOver.png",
+        "next": [
+            "Battle_BackHomePage"
         ]
     },
     "Battle_FastBattleTouch_StoneSelect": {

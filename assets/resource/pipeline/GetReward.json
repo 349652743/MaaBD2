@@ -195,6 +195,12 @@
         ],
         "expected": "获得.*种",
         "action": "Click",
+        "target": [
+            558,
+            582,
+            135,
+            27
+        ],
         "post_delay": 3000,
         "next": [
             "GetReward_GetBusinRewardBack",
